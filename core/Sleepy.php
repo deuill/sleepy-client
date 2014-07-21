@@ -102,12 +102,13 @@ class Sleepy {
 	/**
 	 * Call RPC method on server and return the results, if any, for that request.
 	 * 
-	 * @param  mixed  $namespace  The namespace, or server module, to target this method request.
-	 * @param  string $method     The method to call on the server module.
-	 * @param  mixed  $parameters The request parameters as expected by the server module.
-	 * @return mixed              The response for this request.
+	 * @param  mixed   $namespace  The namespace, or server module, to target this method request.
+	 * @param  string  $method     The method to call on the server module.
+	 * @param  mixed   $parameters The request parameters as expected by the server module.
+	 * @param  boolean $cache      If true, the request is cached and called in batch next request.
+	 * @return mixed               The response for this request.
 	 */
-	public static function call($namespace, $method = null, $parameters = null) {
+	public static function call($namespace, $method = null, $parameters = null, $cache = false) {
 		$authkey = self::get('client', 'authkey');
 		if (is_array($namespace)) {
 			$params = $namespace;
@@ -162,7 +163,7 @@ class Sleepy {
 			Exceptions::log($response->error);
 			Exceptions::error();
 		} else if (isset($response->result) || property_exists($response, 'result')) {
-			if (!empty(self::$cache['data'])) {
+			if ($cache && !empty(self::$cache['data'])) {
 				self::$cache['data']['hashes'][] = $hash;
 				self::$cache['data']['methods'][] = array(
 					'module'  => $namespace,

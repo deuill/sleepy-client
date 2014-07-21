@@ -436,7 +436,7 @@ class Database {
 		$query['auth'] = Sleepy::get('client', 'authkey');
 		$query['sig'] = md5(serialize($query));
 
-		return Sleepy::call('Database', 'Get', $query);
+		return Sleepy::call('Database', 'Get', $query, true);
 	}
 
 	/**

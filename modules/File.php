@@ -117,7 +117,7 @@ class File {
 		$data->url = Sleepy::call('File', 'Get', array(
 			'auth'		=>	Sleepy::get('client', 'authkey'),
 			'checksum'	=>	$sha1
-		));
+		), true);
 
 		$data->url = preg_replace('/\s/', '%20', $data->url);
 		return $data;
@@ -142,7 +142,7 @@ class File {
 		);
 
 		// Find if file already exists remotely.
-		$data->url = Sleepy::call('File', 'Get', $request);
+		$data->url = Sleepy::call('File', 'Get', $request, true);
 		if ($data->url !== "") {
 			return $data;
 		}
