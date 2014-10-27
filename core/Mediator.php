@@ -7,10 +7,10 @@
  * callables under a name and publishing data to all subscribers for that name.
  *
  * Sleepy, the lightweight web application framework.
- * Copyright 2012 - 2014, Alex Palaistras (http://thoughtmonster.org)
+ * Copyright 2012 - 2014, Alex Palaistras (http://deuill.org)
  *
- * @copyright	Copyright 2012 - 2014, Alex Palaistras (http://thoughtmonster.org)
- * @link		http://thoughtmonster.org/sleepy
+ * @copyright	Copyright 2012 - 2014, Alex Palaistras (http://deuill.org)
+ * @link		http://deuill.org/sleepy
  * @package		Sleepy.Core
  * @since		Sleepy 0.1.0
  */

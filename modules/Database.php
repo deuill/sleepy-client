@@ -4,10 +4,10 @@
  * and fetching data to and from databases running on the server.
  *
  * Sleepy, the lightweight web application framework.
- * Copyright 2012 - 2014, Alex Palaistras (http://thoughtmonster.org)
+ * Copyright 2012 - 2014, Alex Palaistras (http://deuill.org)
  *
- * @copyright	Copyright 2012 - 2014, Alex Palaistras (http://thoughtmonster.org)
- * @link		http://thoughtmonster.org/sleepy
+ * @copyright	Copyright 2012 - 2014, Alex Palaistras (http://deuill.org)
+ * @link		http://deuill.org/sleepy
  * @package		Sleepy.Modules
  * @since		Sleepy 0.1.0
  */
