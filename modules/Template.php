@@ -181,8 +181,8 @@ class Template {
 					$lang = reset($lst);
 				}
 
-				$lang = Inflector::lower(preg_replace('/_\s/', '-', $lang));
-				$lang = reset(explode('-', $lang));
+				$lang = explode('-', Inflector::lower(preg_replace('/_\s/', '-', $lang)));
+				$lang = reset($lang);
 			} else {
 				$lang = Sleepy::get('app', 'lang');
 			}

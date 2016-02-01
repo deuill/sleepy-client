@@ -154,8 +154,8 @@ class Database {
 	 */
 	public function where($conditions) {
 		if (!is_array($conditions)) {
-			$conditions = array();
 			$args = func_get_args();
+			$conditions = array();
 
 			for ($i = 0; isset($args[$i]); $i += 2) {
 				$conditions[$args[$i]] = $args[$i + 1];
